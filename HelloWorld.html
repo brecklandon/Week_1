@@ -1,1 +1,101 @@
-<p>HelloWorld</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elements Website</title>
+  <style>
+    /* CSS styles */
+    body {
+      background-color: #333; /* Dark background color */
+    }
+
+    #outer-circle {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border: 1px solid turquoise;
+      border-radius: 50%;
+    }
+
+    .element-button {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid turquoise;
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .element-button img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    #fire {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #water {
+      right: 20%;
+      top: 37%;
+      transform: translateY(-50%);
+    }
+
+    #air {
+      left: 20%;
+      top: 37%;
+      transform: translateY(-50%);
+    }
+
+    #earth {
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #electricity {
+      bottom: 37%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-circle" id="outer-circle">
+    <button class="element-button" id="fire" onclick="showElement('Fire')">
+      <img src="fire.png" alt="Fire Element">
+    </button>
+    <button class="element-button" id="water" onclick="showElement('Water')">
+      <img src="water.png" alt="Water Element">
+    </button>
+    <button class="element-button" id="air" onclick="showElement('Air')">
+      <img src="air.png" alt="Air Element">
+    </button>
+    <button class="element-button" id="earth" onclick="showElement('Earth')">
+      <img src="earth.png" alt="Earth Element">
+    </button>
+    <button class="element-button" id="electricity" onclick="showElement('Electricity')">
+      <img src="electricity.png" alt="Electricity Element">
+    </button>
+  </div>
+
+  <script>
+    // JavaScript code
+    function showElement(element) {
+      alert(`You clicked on ${element} Element`);
+    }
+
+    document.addEventListener('click', function(e) {
+      const clickedButton = e.target.closest('.element-button');
+      if (!clickedButton) {
+        alert('No element is clicked');
+      }
+    });
+  </script>
+</body>
+</html>
