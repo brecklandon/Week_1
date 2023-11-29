@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Elements Website</title>
-  <style>
-    /* CSS styles */
-    body {
-      background-color: #333; /* Dark background color */
-    }
+    <meta charset="UTF-8">
+    <title>Elements Website</title>
+    <script src="https://kit.fontawesome.com/cce35d83e1.js" crossorigin="anonymous"></script>
+    <style>
+        /* CSS styles */
+        body {
+            background-color: #333;
+            /* Dark background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-    #outer-circle {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      border: 1px solid turquoise;
-      border-radius: 50%;
-    }
+        .outer-circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid turquoise;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .element-button {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      border: 1px solid turquoise;
-      border-radius: 50%;
-      background: transparent;
-      cursor: pointer;
-    }
+        .element-button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid turquoise;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            color: white;
+            background-color: #333;
+            /* Set icon color to white */
+        }
 
-    .element-button img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+        /* Positioning for elements */
+        #fire {
+            top: -10%;
+            left: calc(50% - 20px);
+        }
 
-    #fire {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+        #water {
+            top: calc(50% - 40px);
+            right: -10%;
+        }
 
-    #water {
-      right: 20%;
-      top: 37%;
-      transform: translateY(-50%);
-    }
+        #earth {
+            bottom: 0;
+            right: calc(20% - 20px);
+        }
 
-    #air {
-      left: 20%;
-      top: 37%;
-      transform: translateY(-50%);
-    }
+        #electricity {
+            bottom: calc(20% - 40px);
+            left: 10%;
+        }
 
-    #earth {
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    #electricity {
-      bottom: 37%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  </style>
+        #air {
+            top: calc(40% - 20px);
+            left: calc(10% - 40px);
+        }
+    </style>
 </head>
+
 <body>
-  <div class="outer-circle" id="outer-circle">
-    <button class="element-button" id="fire" onclick="showElement('Fire')">
-      <img src="fire.png" alt="Fire Element">
-    </button>
-    <button class="element-button" id="water" onclick="showElement('Water')">
-      <img src="water.png" alt="Water Element">
-    </button>
-    <button class="element-button" id="air" onclick="showElement('Air')">
-      <img src="air.png" alt="Air Element">
-    </button>
-    <button class="element-button" id="earth" onclick="showElement('Earth')">
-      <img src="earth.png" alt="Earth Element">
-    </button>
-    <button class="element-button" id="electricity" onclick="showElement('Electricity')">
-      <img src="electricity.png" alt="Electricity Element">
-    </button>
-  </div>
+    <div class="outer-circle" id="outer-circle">
+        <button title="Fire" class="element-button" id="fire" onclick="showElement('Fire')">
+            <i class="fas fa-fire fa-lg"></i>
+        </button>
+        <button title="Water" class="element-button" id="water" onclick="showElement('Water')">
+            <i class="fas fa-droplet fa-lg"></i>
+        </button>
+        <button title="Air" class="element-button" id="air" onclick="showElement('Air')">
+            <i class="fas fa-wind fa-lg"></i>
+        </button>
+        <button title="Earth" class="element-button" id="earth" onclick="showElement('Earth')">
+            <i class="fas fa-mountain-sun fa-lg"></i>
+        </button>
+        <button title="Electricity" class="element-button" id="electricity" onclick="showElement('Electricity')">
+            <i class="fas fa-bolt fa-lg"></i>
+        </button>
+        <button title="Person" class="element-button" id="human" onclick="showElement('Human')">
+            <i class="fa-solid fa-person fa-lg"></i>
+        </button>
+    </div>
 
-  <script>
-    // JavaScript code
-    function showElement(element) {
-      alert(`You clicked on ${element} Element`);
-    }
+    <script>
+        // JavaScript code
+        function showElement(element) {
+            alert(`You clicked on ${element} Element`);
+        }
 
-    document.addEventListener('click', function(e) {
-      const clickedButton = e.target.closest('.element-button');
-      if (!clickedButton) {
-        alert('No element is clicked');
-      }
-    });
-  </script>
+        document.addEventListener('click', function (e) {
+            const clickedButton = e.target.closest('.element-button');
+            if (!clickedButton) {
+                alert('No element is clicked');
+            }
+        });
+    </script>
 </body>
 </html>
