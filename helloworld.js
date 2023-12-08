@@ -3,21 +3,20 @@ function showElement(element) {
     alert(`You clicked on ${element} Element`);
 }
 
-let counterVariable = Number(localStorage.getItem('counter')) || 0;
 
 function count() {   
-    counterVariable = Number(localStorage.getItem('counter')) 
-    console.log(counterVariable);
+    let counterVariable = Number(localStorage.getItem('counter')) || 0;
     if (5 < counterVariable) {
         localStorage.setItem('counter', 0);
     } else {
         localStorage.setItem('counter', Number(counterVariable) + 1);
     }
-    isShowing()
+    console.log(counterVariable);
+    isShowing();
 }
 
 function isShowing() {
-    counterVariable = Number(localStorage.getItem('counter')) 
+    counterVariable = Number(localStorage.getItem('counter'));
     if (counterVariable == 1) {
         document.getElementById("fire").style.display = 'block';
     } else {
