@@ -5,82 +5,15 @@
     <meta charset="UTF-8">
     <title>Elements Website</title>
     <script src="https://kit.fontawesome.com/cce35d83e1.js" crossorigin="anonymous"></script>
-    <style>
-        /* CSS styles */
-        body {
-            background-color: #333;
-            /* Dark background color */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .outer-circle {
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border: 1px solid turquoise;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .element-button {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 1px solid turquoise;
-            border-radius: 50%;
-            background: transparent;
-            cursor: pointer;
-            color: white;
-            background-color: #333;
-            /* Set icon color to white */
-        }
-
-        /* Positioning for elements */
-        #fire {
-            top: -10%;
-            left: calc(50% - 20px);
-            color: red;
-        }
-
-        #water {
-            top: calc(50% - 40px);
-            right: -10%;
-            color: aqua;
-        }
-
-        #earth {
-            bottom: 0;
-            right: calc(20% - 20px);
-            color: green;
-        }
-
-        #electricity {
-            bottom: calc(20% - 40px);
-            left: 10%;
-            color: yellow;
-        }
-
-        #air {
-            top: calc(40% - 20px);
-            left: calc(10% - 40px);
-            color: white;
-        }
-
-        #human {
-            color: black
-        }
-
-    </style>
+    <link rel="stylesheet" href="helloworld.css" />
+    <script src="helloworld.js"></script>
 </head>
 
-<body>
+<body onload="isShowing()">
     <div class="outer-circle" id="outer-circle">
+        <button title="counter" class="element-button" id="counter" onclick="count()">
+            <i class="fas fa-solid fa-plus fa-lg"></i>
+        </button>
         <button title="Fire" class="element-button" id="fire" onclick="showElement('Fire')">
             <i class="fas fa-fire fa-lg"></i>
         </button>
@@ -100,19 +33,5 @@
             <i class="fa-solid fa-person fa-lg"></i>
         </button>
     </div>
-
-    <script>
-        // JavaScript code
-        function showElement(element) {
-            alert(`You clicked on ${element} Element`);
-        }
-
-        document.addEventListener('click', function (e) {
-            const clickedButton = e.target.closest('.element-button');
-            if (!clickedButton) {
-                alert('No element is clicked');
-            }
-        });
-    </script>
 </body>
 </html>
