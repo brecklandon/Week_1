@@ -44,38 +44,32 @@ body {
     top: -10%;
     left: calc(50% - 20px);
     color: red;
-    display: none;
 }
 
-#water {
+#wind {
     top: calc(50% - 40px);
     right: -10%;
-    color: aqua;
-    display: none;
+    color: white;
+}
+
+#lightning {
+    bottom: 0;
+    right: calc(20% - 20px);
+    color: yellow;
 }
 
 #earth {
-    bottom: 0;
-    right: calc(20% - 20px);
-    color: green;
-    display: none;
-}
-
-#electricity {
     bottom: calc(20% - 40px);
     left: 10%;
-    color: yellow;
-    display: none;
+    color: green;
 }
 
-#air {
+#water {
     top: calc(40% - 20px);
     left: calc(10% - 40px);
-    color: white;
-    display: none;
+    color: aqua;
 }
 
 #human {
     color: black;
-    display: none;
 }

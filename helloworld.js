@@ -24,27 +24,27 @@ function isShowing() {
     }
 
     if (counterVariable == 2) {
-        document.getElementById("water").style.display = 'block';
+        document.getElementById("wind").style.display = 'block';
     } else {
-        document.getElementById("water").style.display = 'none';
+        document.getElementById("wind").style.display = 'none';
     }
 
     if (counterVariable == 3) {
+        document.getElementById("lightning").style.display = 'block';
+    } else {
+        document.getElementById("lightning").style.display = 'none';
+    }
+
+    if (counterVariable == 4) {
         document.getElementById("earth").style.display = 'block';
     } else {
         document.getElementById("earth").style.display = 'none';
     }
 
-    if (counterVariable == 4) {
-        document.getElementById("air").style.display = 'block';
-    } else {
-        document.getElementById("air").style.display = 'none';
-    }
-
     if (counterVariable == 5) {
-        document.getElementById("electricity").style.display = 'block';
+        document.getElementById("water").style.display = 'block';
     } else {
-        document.getElementById("electricity").style.display = 'none';
+        document.getElementById("water").style.display = 'none';
     }
 
     if (counterVariable == 6) {
